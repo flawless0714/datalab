@@ -108,10 +108,13 @@ NOTES:
  *   Legal ops: ! ~ & ^ | + << >>
  *   Max ops: 10
  *   Rating: 4
+ *   notes: another approach is implicit conversion (by @aben20807)
  */
 int absVal(int x)
 {
-    return 42;
+    int y = (x >> 15);
+    y >>= 16;
+    return ((x ^ y) + (~y + 1));
 }
 
 /*
