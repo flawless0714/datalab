@@ -100,7 +100,7 @@ NOTES:
      between the maximum ops in the writeup and in this file, consider
      this file the authoritative source.
  */
-
+#include <stdio.h>
 /*
  * absVal - absolute value of x
  *   Example: absVal(-1) = 1.
@@ -127,7 +127,13 @@ int absVal(int x)
  */
 int addOK(int x, int y)
 {
-    return 42;
+    unsigned xM = x, yM = y, oF = x + y;
+
+    xM >>= 31;
+    yM >>= 31;
+    oF >>= 31;
+
+    return !(((!xM) && (!yM) && (oF)) || ((xM) && (yM) && (!oF)));
 }
 
 /*
