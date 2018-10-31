@@ -146,9 +146,7 @@ int addOK(int x, int y)
  */
 int allEvenBits(int x)
 {
-    unsigned y = x;
-
-    return !((y & 0x55555555) ^ 0x55555555);
+    return !((x & 0x55555555) ^ 0x55555555);
 }
 
 /*
@@ -161,9 +159,7 @@ int allEvenBits(int x)
  */
 int allOddBits(int x)
 {
-    unsigned y = x;
-
-    return !((y & 0xAAAAAAAA) ^ 0xAAAAAAAA);
+    return !((x & 0xAAAAAAAA) ^ 0xAAAAAAAA);
 }
 
 /*
