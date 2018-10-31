@@ -146,7 +146,9 @@ int addOK(int x, int y)
  */
 int allEvenBits(int x)
 {
-    return 42;
+    unsigned y = x;
+
+    return !((y & 0x55555555) ^ 0x55555555);
 }
 
 /*
