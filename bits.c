@@ -100,7 +100,7 @@ NOTES:
      between the maximum ops in the writeup and in this file, consider
      this file the authoritative source.
  */
-#include <stdio.h>
+
 /*
  * absVal - absolute value of x
  *   Example: absVal(-1) = 1.
