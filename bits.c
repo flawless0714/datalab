@@ -161,7 +161,9 @@ int allEvenBits(int x)
  */
 int allOddBits(int x)
 {
-    return 42;
+    unsigned y = x;
+
+    return !((y & 0xAAAAAAAA) ^ 0xAAAAAAAA);
 }
 
 /*
