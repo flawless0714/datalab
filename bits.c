@@ -185,7 +185,7 @@ int anyEvenBit(int x)
  */
 int anyOddBit(int x)
 {
-    return 42;
+    return !!(x & 0xAAAAAAAA);
 }
 
 /*
